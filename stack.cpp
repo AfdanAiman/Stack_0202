@@ -30,6 +30,18 @@ public:
         newNode->next = top; // 3. Set the next pointer of the new node to the current top
         top = newNode; // 4. Update the top pointer to the new node
         cout << "Pushed: " << value << endl;
+        return value;
     }
-};
+
+    // Pop operation: Remove and topmost element from the stack
+    void pop() {
+        if (isEmpety()) {
+            cout << "Stack is empety." << endl;
+        }
+
+        Node* temp = top; //Create a temporary pointer to the top node
+        top = top->next; // Update the top pointer to the next node
+        cout << "Popped value: " << top->data << endl;
+    }
+
 
